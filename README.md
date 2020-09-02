@@ -19,7 +19,7 @@
 netcat <target_ip> <port>
 ```
 
-2. Fuzzing ([Script]())
+2. Fuzzing ([Script](https://github.com/rdoix/Buffer-Overflow-Cheat-Sheet/blob/master/Fuzzer.py))
 
 3. Add pattern for crash replication and controlling EIP
 ```
