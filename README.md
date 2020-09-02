@@ -29,26 +29,32 @@ msf-pattern_offset -q $EIP
 
   4. Compare the bad chars
 ```
-   !mona bytearray -b "\x00"
+   !mona bytearray -b "\x00\xyz\xxx"
    !mona compare -f C:\mona\output.bin -a <ESP_badchar_address>
 ```
+After found the bad character we have 2 method, using step 5 or 6
 
-  5. keep the same order of outputs
+  5. Find address JMP ESP with the true bad chars, *if using this method please SKIP step 6-8, and continue at point 9
+  ```
+  !mona jmp -r esp -cpb  "\x00\xyz\xxx"
+  ```
+#
+  6. keep the same order of outputs
 ```
 msf-nasm_shell
    nasm > jmp esp
    00000000  FFE4              jmp esp
 ```
 
-  6. show and select a dll module
+  7. show and select a dll module
 ```
 !mona modules
 ```  
-  7. find address of "jmp esp" (xff xe4)
+  8. find address of "jmp esp" (xff xe4)
 ```
 !mona find -s "\xff\xe4" -m "suspectmodule.dll"
 ```
-  8. find "pop,pop,ret" for SEH
+  9. find "pop,pop,ret" for SEH
 ```
 !mona seh -m "$module"
 ```
