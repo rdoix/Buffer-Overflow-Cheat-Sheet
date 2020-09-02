@@ -29,8 +29,8 @@ msf-pattern_offset -q $EIP
 
   4. Compare the bad chars
 ```
-   !mona bytearray
-   !mona compare -f C:\mona\output.bin -a <address>
+   !mona bytearray -b "\x00"
+   !mona compare -f C:\mona\output.bin -a <ESP_badchar_address>
 ```
 
   5. keep the same order of outputs
