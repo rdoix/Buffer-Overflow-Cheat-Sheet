@@ -30,7 +30,7 @@ msf-pattern_offset -q $EIP
   4. Compare the bad chars
 ```
    !mona bytearray -b "\x00\xyz\xxx"
-   !mona compare -f C:\mona\output.bin -a <ESP_badchar_address>
+   !mona compare -f C:\mona\bytearray.txt -a <ESP_badchar_address>
 ```
 After found the bad character we have 2 method, using step 5 or 6
 
