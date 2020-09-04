@@ -29,8 +29,9 @@ msf-pattern_offset -q $EIP
 
   4. Compare the bad chars
 ```
-   !mona bytearray -b "\x00\xyz\xxx"
-   !mona compare -f C:\mona\bytearray.txt -a <ESP_badchar_address>
+!mona config -set workingfolder c:\mona\%p
+!mona bytearray -b "\x00\xyz\xxx"
+!mona compare -f C:\mona\vulnapp\bytearray.txt -a <ESP_badchar_address>
 ```
 After found the bad character we have 2 method, using step 5 or 6
 
