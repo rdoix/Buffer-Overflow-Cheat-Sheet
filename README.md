@@ -152,7 +152,8 @@ C:\Tools\windows_buffer_overflows> nc -w 3 192.168.119.223 1234 < VulnApp1.exe
 * Download windows 10 x86 ISO: https://www.microsoft.com/en-gb/software-download/windows10ISO
 
 # 
-Reffrence _https://tcm-sec.com/2019/05/25/buffer-overflows-made-easy/_
-          _https://www.thecybermentor.com/buffer-overflows-made-easy_
-          _http://strongcourage.github.io/2020/04/19/bof.html_
+Reffrence :
+* _https://tcm-sec.com/2019/05/25/buffer-overflows-made-easy/_
+* _https://www.thecybermentor.com/buffer-overflows-made-easy_
+* _http://strongcourage.github.io/2020/04/19/bof.html_
 
