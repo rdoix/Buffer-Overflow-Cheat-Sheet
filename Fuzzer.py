@@ -2,7 +2,7 @@
 import socket, time, sys
 
 ip = "127.0.0.1"
-port = 4444
+port = <PORT>
 timeout = 5
 
 buffer = []
@@ -18,7 +18,7 @@ for string in buffer:
         connect = s.connect((ip, port))
         s.recv(1024)
         print("Fuzzing loaded with %s bytes" % len(string))
-        s.send("store/shell/TRUN " + string + "\r\n")
+        s.send("store/shell/TRUN/etc-string " + string + "\r\n")
         s.recv(1024)
         s.close()
 
